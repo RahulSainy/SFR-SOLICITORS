@@ -1,0 +1,113 @@
+<style>
+    .c1 {
+        display: flex;
+        position: absolute;
+    }
+
+    #i1 {
+        height: 70px;
+        margin-bottom: 0px;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    /* #ft { */
+        /* width: 30vh; */
+        /* margin-left: 10vh; */
+    /* } */
+
+    .social-media {
+        list-style: none;
+        /* margin-left: 70vh; */
+        margin-top: 10vh;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .social-media li {
+        margin-left: 15px;
+    }
+
+    .social-media a:hover {
+        color: #007bff;
+    }
+
+
+    @media screen and (max-width: 576px) {
+        .c1 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #i1 {
+            margin-top: 10px;
+            margin-left: 0;
+            width: auto;
+        }
+
+        .social-media {
+            margin: 10px auto 0;
+            justify-content: center;
+        }
+
+        .social-media li {
+            margin-left: 10px;
+        }
+    }
+
+
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+        #ft {
+            width: 50%;
+            margin-left: 25%;
+        }
+
+        .social-media {
+            margin-left: auto;
+            margin-right: 10px;
+            justify-content: flex-end;
+        }
+    }
+
+
+    @media screen and (min-width: 768px) {
+        #ft {
+            /* width: 30vh; */
+            margin-left: 10vh;
+        }
+
+        .social-media {
+            /* margin-left: 70vh; */
+            margin-top: 10vh;
+            justify-content: flex-end;
+        }
+    }
+</style>
+<footer id="footer-placeholder">
+    <div class="col-sm-12 col-md-6 mb-4 mb-md-0">
+        <div class="c1" style="width: -webkit-fill-available; padding: 2rem;">
+
+            <img id="i1" src="https://sfrmedical.com/assets/logo.png" alt="Logo" class="img-fluid">
+            <p id="ft">© Streamlined Forensic Reporting Limited
+                Company number 11401401
+                Trading as SFR Medical</p>
+
+            <div class="col-sm-12 col-md-6">
+
+                <ul class="social-media">
+                    <li><a href="https://www.facebook.com/sfrmedical/"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/sfrmedical"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/sfrmedical/"><i class="bi bi-linkedin"></i></a></li>
+
+                    <li><a href="https://www.policybee.co.uk/"><img src="	https://www.policybee.co.uk/_img/badge/Green_PolicyBee_Badge.png"  width="40" height="40" class="img-fluid"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><img src="https://sfrmedical.com/assets/ce.png"  width="40" height="40"><i class="fa fa-twitter" class="img-fluid"></i></a></li>
+                    <li><a href="#"><img src="https://sfrmedical.com/assets/Approachable_UKAS_1.jpg"  width="40" height="40" class="img-fluid"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><img src="https://sfrmedical.com/assets/ico.jpg"  width="40" height="40" class="img-fluid"><i class="fa fa-twitter"></i></a></li>
+        
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</footer>

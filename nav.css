@@ -1,9 +1,12 @@
 .navbar {
     height: 16vh;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     box-shadow: -1px 3px 13px 0px #0000005c;
-    z-index: 2;
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    margin-bottom: 10rem;
 }
 
 .nav_btn_div {

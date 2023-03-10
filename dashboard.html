@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <style>
+        .crd-btn {
+            position: absolute;
+            bottom: 4%;
+        }
+
+        /* Custom styles */
+        .badge-success {
+            background-color: #28a745;
+        }
+
+        .badge-danger {
+            background-color: #dc3545;
+        }
+
+        .badge-warning {
+            background-color: #ffc107;
+        }
+
+        .badge-success.text-white {
+            color: #fff;
+        }
+
+        .badge-danger.text-white {
+            color: #fff;
+        }
+
+        .badge-warning.text-white {
+            color: #fff;
+        }
+
+        /* Responsive table styles */
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        @media screen and (max-width: 767px) {
+            .table-responsive {
+                width: 100%;
+                margin-bottom: 15px;
+                overflow-y: hidden;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+                border: 1px solid #ddd;
+            }
+
+            .table-responsive>.table-bordered {
+                border: 0;
+            }
+        }
+
+        /* --------------- nav -----------  */
+        .navbar {
+            height: 16vh;
+            /* position: sticky; */
+            /* top: 0; */
+            box-shadow: -1px 3px 13px 0px #0000005c;
+            z-index: 100;
+            width: 100%;
+            /* position: fixed; */
+            /* margin-bottom: 10rem; */
+        }
+
+        .nav_btn_div {
+            margin-right: 6%;
+            position: absolute;
+            right: 0;
+        }
+
+        .nav_btn {
+            border-radius: 4px;
+            padding: 5px 28px;
+            font-family: monospace;
+            margin-right: 16px;
+            font-weight: bold;
+
+        }
+
+        /* ----------------------home_container--------------------- */
+        .home_container {
+            color: white;
+            height: 80vh;
+            width: 100%;
+            background-color: rgb(0, 139, 231);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* ----------------------------------container---------------------- */
+        .nav-container {
+            height: auto;
+            display: flex;
+            margin: 4% auto;
+            justify-content: space-around;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .btn-55 {
+            position: absolute;
+            bottom: -6%;
+        }
+
+        /* ----------------------------------media query---------------------------- */
+        @media only screen and (max-width:800px) {
+            .navbar {
+                height: auto;
+            }
+
+            .nav_btn_div {
+                margin: 2% 0%;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<!-- ----------- nav ----------------  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(function () {
+        $("#footer-placeholder").load("./footer.html");
+
+    });
+</script>
+
+
+<body onload="$('#consent-modal').modal('show');">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-center">
+
+        <div class="container-fluid nav-container">
+            <img class="logo_img" src="https://foundersbook.eclublbs.com/wp-content/uploads/2022/01/sfr.png" width="12%"
+                height="80%" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./solicitors.html">Solicitors</a></li>
+                            <li><a class="dropdown-item" href="./Patients.html">Patients</a></li>
+                            <li><a class="dropdown-item" href="./Employers.html">Employers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./Experts.html">Our Experts</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Education</a>
+                        </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://sfrmedical.com/our-team">About
+                            us</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Our Director</a></li>
+                                <li><a class="dropdown-item" href="#">Administration Team</a></li>
+                                <li><a class="dropdown-item" href="#">Consulting Rooms</a></li>
+                            </ul>
+                        </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://sfrmedical.com/news-and-posts">News</a>
+                    </li>
+
+                    <div class="nav_btn_div">
+                        
+                        <button class="btn btn-success mb-0 h1 nav_btn" type="button" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Logout</button>
+                    </div>
+
+
+
+
+                </ul>
+
+
+            </div>
+
+    </nav>
+    <div class="modal fade" id="consent-modal" tabindex="-1" role="dialog" aria-labelledby="consent-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="consent-modal-label">Medical Expert Witness Request Consent Form</h5>
+                </div>
+                <div class="modal-body">
+                    <p>As a solicitor, I acknowledge and agree that:</p>
+                    <ul>
+                        <li>The medical expert witness I am requesting is being retained to provide an independent
+                            opinion in the form of an expert report, which will be provided to me for the purpose of
+                            assisting me in the preparation and presentation of my client's case.</li>
+                        <li>The medical expert witness is not my client and owes no duty of care to me or my client.
+                        </li>
+                        <li>The medical expert witness is not required to advocate for me or my client, and may have
+                            views that differ from mine or my client's.</li>
+                        <li>The medical expert witness has been provided with a copy of this consent form and has agreed
+                            to abide by its terms.</li>
+                    </ul>
+                    <p>By submitting this request for a medical expert witness, I confirm that I have read and
+                        understood the above terms, and agree to be bound by them.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Agree</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container-fluid mt-3">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="#dashboard" class="list-group-item list-group-item-action active"
+                            data-toggle="tab">Dashboard</a>
+                        <a href="#send-loi" class="list-group-item list-group-item-action" data-toggle="tab">Send
+                            LOI</a>
+                        <a href="#received-reports" class="list-group-item list-group-item-action"
+                            data-toggle="tab">Received Reports</a>
+                        <a href="#pay-money" class="list-group-item list-group-item-action" data-toggle="tab">Pay
+                            Bills</a>
+                    </div>
+                </div>
+                <!-- Main Content -->
+
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="dashboard">
+                            <h2>Dashboard</h2>
+                            <hr>
+                            <p>Welcome to your dashboard. From here, you can send a Letter of Instruction (LOI) for an
+                                expert witness, view your received reports, and pay your bills. Use the navigation on
+                                the left to get started.</p>
+
+
+
+                            <section id="services" class="py-5 bg-light">
+                                <h1>SFR Medical Legal Services</h1>
+                                <p>UKExpertMedical works nationwide with legal professionals nationwide. If you work in
+                                    the legal profession and want to find out more about the medico legal services we
+                                    can offer, select from one of the following:
+
+                                    For a list of fees for any of our services, get in touch with us on <a href=""> 0345
+                                        9011 897</a> or
+                                    email us at <a href=""> instruct@sfrmedical.co.uk</a></p>
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-4">
+                                            <div class="card h-100">
+                                                <img src="https://ukexpertmedical.co.uk/wp-content/uploads/2021/09/Pagination-Services-Green-1.jpg"
+                                                    class="card-img-top" alt="Service 1">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Medical Records Pagination</h5>
+                                                    <p class="card-text">Whether your medical records need sorting and
+                                                        collating, indexing, or digitising to disc, UKExpertMedical
+                                                        provides an efficient and reliable service, by a team with years
+                                                        of experience in the field. </p>
+                                                    <a href="https://sfrmedical.com/news-and-posts" class="btn btn-primary crd-btn  ">Learn More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4">
+                                            <div class="card h-100">
+                                                <img src="https://ukexpertmedical.co.uk/wp-content/uploads/2021/09/collation-green.jpg"
+                                                    class="card-img-top" alt="Service 2">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Medical Records Collation</h5>
+                                                    <p class="card-text">Would just like to use our Collation services?
+                                                        Our experts offer standalone services so we can offer bespoke
+                                                        service that best suit your needs. Get in touch today and find
+                                                        out how we can help with your Medical Records Collation. </p>
+                                                    <a href="https://sfrmedical.com/news-and-posts" class="btn btn-primary crd-btn ">Learn More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4">
+                                            <div class="card h-100">
+                                                <img src="https://ukexpertmedical.co.uk/wp-content/uploads/2021/09/Chronology-Green.jpg"
+                                                    class="card-img-top" alt="Service 3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Triage and Case Review</h5>
+                                                    <p class="card-text">We provide a valuable Medical Records Review
+                                                        service and early assessment of prospects. We pride ourselves in
+                                                        being a one-stop-shop for all medico legal matters.</p>
+                                                    <a href="https://sfrmedical.com/news-and-posts" class="btn btn-primary crd-btn ">Learn More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+
+
+                        </div>
+                        <div class="tab-pane" id="send-loi">
+                            <h2>Send LOI</h2>
+                            <hr>
+                            <p>Send LOI to experts</p>
+                            <section class="bg-light">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 offset-md-2">
+                                            <h2 class="text-center mb-4">Letter of Instruction (LOI) for Expert Witness
+                                            </h2>
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="clientName" class="form-label-icon"><i
+                                                            class="bi bi-person-fill"></i> Client Name:</label>
+                                                    <input type="text" class="form-control" id="clientName" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="caseNumber" class="form-label-icon"><i
+                                                            class="bi bi-file-earmark-text-fill"></i> Case
+                                                        Number:</label>
+                                                    <input type="text" class="form-control" id="caseNumber" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="expertise" class="form-label-icon"><i
+                                                            class="bi bi-award-fill"></i> Type of Expertise
+                                                        Required:</label>
+                                                    <input type="text" class="form-control" id="expertise" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="timeline" class="form-label-icon"><i
+                                                            class="bi bi-calendar3-week-fill"></i> Timeline for
+                                                        Completion:</label>
+                                                    <input type="text" class="form-control" id="timeline" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="budget" class="form-label-icon"><i
+                                                            class="bi bi-currency-pound"></i> Budget for Expert
+                                                        Witness:</label>
+                                                    <input type="text" class="form-control" id="budget" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="details" class="form-label-icon"><i
+                                                            class="bi bi-file-earmark-text-fill"></i> Details of the
+                                                        Case:</label>
+                                                    <textarea class="form-control" id="details" rows="5"
+                                                        required></textarea>
+                                                </div>
+                                                <br>
+                                                <label for="details" class="form-label-icon"><i
+                                                        class="bi bi-file-earmark-text-fill"></i> List OF
+                                                    Experts</label>
+                                                <iframe style="width: 100%; height: 30rem;"
+                                                    src="https://my.resolvemedicolegal.co.uk/home/medics/"
+                                                    frameborder="0"></iframe>
+
+                                                <br>
+                                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                        <div class="tab-pane" id="received-reports">
+                            <h1>Received Reports</h1>
+                            <hr>
+                            <p>Look into received reports</p>
+
+                            <div class="container">
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card mb-4">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><i class="bi bi-file-earmark-text"></i> Report
+                                                    Title 1</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit. Fusce vel tellus commodo, hendrerit quam a, laoreet ipsum. Sed
+                                                    in dolor sit amet urna fermentum tincidunt.</p>
+                                                <a href="#" class="card-link"><i
+                                                        class="bi bi-file-earmark-arrow-down"></i> Download Report</a>
+                                            </div>
+                                            <div class="card-footer text-muted">
+                                                Date Received: January 1, 2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card mb-4">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><i class="bi bi-file-earmark-text"></i> Report
+                                                    Title 2</h5>
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit. Fusce vel tellus commodo, hendrerit quam a, laoreet ipsum. Sed
+                                                    in dolor sit amet urna fermentum tincidunt.</p>
+                                                <a href="#" class="card-link"><i
+                                                        class="bi bi-file-earmark-arrow-down"></i> Download Report</a>
+                                            </div>
+                                            <div class="card-footer text-muted">
+                                                Date Received: February 15, 2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane" id="pay-money">
+                            <h2>Pay Bills</h2>
+                            <hr>
+                            <p>Check your bills and pay</p>
+                            <div class="container">
+                                <h1>Pay Your Bills</h1>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Service</th>
+                                                <th>Amount (EUR)</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01/01/2023</td>
+                                                <td>Expert Witness Report</td>
+                                                <td>€350.00</td>
+                                                <td><span class="badge badge-success text-white">Paid</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>01/15/2023</td>
+                                                <td>Expert Witness Report</td>
+                                                <td>€450.00</td>
+                                                <td><span class="badge badge-danger text-white">Unpaid</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>02/01/2023</td>
+                                                <td>Expert Witness Testimony</td>
+                                                <td>€900.00</td>
+                                                <td><span class="badge badge-warning text-white">Pending</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>02/15/2023</td>
+                                                <td>Consultation</td>
+                                                <td>€150.00</td>
+                                                <td><span class="badge badge-danger text-white">Unpaid</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>03/01/2023</td>
+                                                <td>Expert Witness Report</td>
+                                                <td>€650.00</td>
+                                                <td><span class="badge badge-danger text-white">Unpaid</span></td>
+                                            </tr>
+
+                                            <td></td>
+                                            <td> <b>Total</b> </td>
+                                            <td>€1250.00</td>
+                                            <td><button class="btn btn-primary text-white">Pay Now</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <div id="footer-placeholder">
+    </div>
+</body>
+
+</html>

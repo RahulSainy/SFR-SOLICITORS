@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Letter of Instruction (LOI) for Expert Witness</h1>
+  <form>
+    <div class="form-group">
+      <label for="clientName">Client Name:</label>
+      <input type="text" class="form-control" id="clientName" required>
+    </div>
+    <div class="form-group">
+      <label for="caseNumber">Case Number:</label>
+      <input type="text" class="form-control" id="caseNumber" required>
+    </div>
+    <div class="form-group">
+      <label for="expertise">Type of Expertise Required:</label>
+      <input type="text" class="form-control" id="expertise" required>
+    </div>
+    <div class="form-group">
+      <label for="timeline">Timeline for Completion:</label>
+      <input type="text" class="form-control" id="timeline" required>
+    </div>
+    <div class="form-group">
+      <label for="budget">Budget for Expert Witness:</label>
+      <input type="text" class="form-control" id="budget" required>
+    </div>
+    <div class="form-group">
+      <label for="details">Details of the Case:</label>
+      <textarea class="form-control" id="details" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
